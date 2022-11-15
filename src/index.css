@@ -1,5 +1,15 @@
+@font-face {
+  font-family: "GilroyB";
+  src: local("GilroyB"), url("./fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url("./fonts/Gilroy-Light.otf") format("opentype");
+  font-weight: normal;
+}
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Gilroy, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -33,6 +43,7 @@ body {
 }
 
 h1 {
+  font-family: GilroyB;
   font-size: 3.2em;
   line-height: 1.1;
 }
@@ -55,4 +66,3 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
