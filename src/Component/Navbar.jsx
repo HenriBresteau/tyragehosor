@@ -1,14 +1,15 @@
 import { GiftIcon, LightBulbIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const menu = [
   {
     name: "Thêmes",
-    href: "#",
+    href: "/",
     icon: LightBulbIcon,
   },
   {
     name: "KiDonneAKi",
-    href: "#",
+    href: "/KiDonneAKi",
     icon: GiftIcon,
   },
 ];
@@ -20,7 +21,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-2">
           <img
             className="h-10 w-auto"
-            src="/src/assets/logo_noel.svg"
+            src="/logo_noel.svg"
             alt="logo"
           />
           <h1 className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#30CFD0] to-[#330867] ">
@@ -30,9 +31,9 @@ export default function Navbar() {
         <ul className="flex space-x-10">
           {menu.map((item) => (
             <li key={item.name}>
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
               >
                 <item.icon
@@ -42,7 +43,7 @@ export default function Navbar() {
                 <span className="ml-3 text-base font-medium text-[#330867] ">
                   {item.name}
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

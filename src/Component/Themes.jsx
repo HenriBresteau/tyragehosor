@@ -4,6 +4,7 @@ import {
   TrashIcon,
 } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
+import Title from "./Title";
 
 export const Themes = () => {
   const [theme, setTheme] = useState("");
@@ -48,6 +49,7 @@ export const Themes = () => {
 
   return (
     <div className="my-10 mx-auto max-w-md lg:max-w-4xl overflow-hidden">
+      <Title>Thêmes</Title>
       <p>
         Ajoutez plusieurs éléments à tirer au sort, puis cliquez sur "Tirer au
         sort"..
@@ -93,11 +95,7 @@ export const Themes = () => {
 
       <div className="mt-12 bg-white py-6 px-6 rounded-lg grid grid-cols-2 items-center justify-items-center ">
         <span>
-          <img
-            src="/src/assets/winner.png"
-            alt="Tyragehore"
-            className="w-40 h-40"
-          />
+          <img src="/winner.png" alt="Tyragehore" className="w-40 h-40" />
         </span>
         <p className="text-[#30CFD0] uppercase font-[GilroyB] text-3xl mt-2 w-[50%] ">
           {winner.length > 1 ? (
