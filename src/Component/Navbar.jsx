@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const menu = [
   {
-    name: "Thêmes",
+    name: "Thèmes",
     href: "/",
     icon: LightBulbIcon,
   },
