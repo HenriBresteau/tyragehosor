@@ -8,7 +8,28 @@ import Title from "./Title";
 
 export const Themes = () => {
   const [theme, setTheme] = useState("");
-  const [listTheme, setListTheme] = useState(["Terre", "Eau"]);
+  const [listTheme, setListTheme] = useState([
+    "Apéro",
+    "Pirate",
+    "Étoiles",
+    "Mouche",
+    "Murasaki",
+    "Bonnet",
+    "Boule",
+    "La conquête spatiale",
+    "Poule",
+    "Vin",
+    "Spécialité Locale",
+    "Vanille",
+    "Lumière",
+    "Confiture",
+    "Hiver",
+    "Réflexion",
+  ]);
+  console.log(
+    "🚀 ~ file: Themes.jsx ~ line 26 ~ Themes ~ listTheme",
+    listTheme.length
+  );
   const [winner, setWinner] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -49,7 +70,7 @@ export const Themes = () => {
 
   return (
     <div className="my-10 mx-auto max-w-md lg:max-w-4xl overflow-hidden">
-      <Title>Thêmes</Title>
+      <Title>Thèmes</Title>
       <p>
         Ajoutez plusieurs éléments à tirer au sort, puis cliquez sur "Tirer au
         sort"..
@@ -76,7 +97,7 @@ export const Themes = () => {
       </form>
 
       <div className="my-4">
-        <h2 className="py-2 text-xl">Liste des thêmes :</h2>
+        <h2 className="py-2 text-xl">Liste des thèmes :</h2>
         <ul className="flex gap-4 flex-wrap">
           {listTheme.map((item, index) => (
             <BoxList item={item} key={index} handleDelete={handleDelete} />
