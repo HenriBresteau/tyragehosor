@@ -5,8 +5,4 @@ import "./index.css";
 import "./fonts/Gilroy-ExtraBold.otf";
 import "./fonts/Gilroy-Light.otf";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

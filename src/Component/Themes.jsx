@@ -5,31 +5,30 @@ import {
 } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
 import Title from "./Title";
+import JSConfetti from "js-confetti";
 
 export const Themes = () => {
   const [theme, setTheme] = useState("");
   const [listTheme, setListTheme] = useState([
-    "Apéro",
-    "Pirate",
-    "Étoiles",
-    "Mouche",
-    "Murasaki",
-    "Bonnet",
-    "Boule",
-    "La conquête spatiale",
-    "Poule",
-    "Vin",
-    "Spécialité Locale",
-    "Vanille",
-    "Lumière",
-    "Confiture",
-    "Hiver",
-    "Réflexion",
+    "🍸 Apéro",
+    "🏴‍☠️ Pirate",
+    "⭐ Étoiles",
+    "🪰 Mouche",
+    "🟣 Murasaki",
+    "🧶 Bonnet",
+    "🎱 Boule",
+    "🚀 La conquête spatiale",
+    "🐔 Poule",
+    "🍷 Vin",
+    "🏠 Spécialité Locale",
+    "🍨 Vanille",
+    "🕯️ Lumière",
+    "🍯 Confiture",
+    "🧊 Hiver",
+    "💡 Réflexion",
   ]);
-  console.log(
-    "🚀 ~ file: Themes.jsx ~ line 26 ~ Themes ~ listTheme",
-    listTheme.length
-  );
+  const canvas = document.getElementById("custom_canvas");
+  const jsConfetti = new JSConfetti({ canvas });
   const [winner, setWinner] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -58,10 +57,16 @@ export const Themes = () => {
   );
   const handleDraw = () => {
     let winner = Math.floor(Math.random() * listTheme.length);
+    let winnerConfetti = listTheme[winner].split(" ")[0];
     setIsLoading(true);
     setTimeout(() => {
       setWinner(listTheme[winner]);
       setIsLoading(false);
+      setTimeout(() => {
+        jsConfetti.addConfetti({
+          emojis: [winnerConfetti],
+        });
+      }, 750);
     }, 3600);
     setWinner("");
   };
@@ -118,9 +123,15 @@ export const Themes = () => {
         <span>
           <img src="/winner.png" alt="Tyragehore" className="w-40 h-40" />
         </span>
-        <p className="text-[#30CFD0] uppercase font-[GilroyB] text-3xl mt-2 w-[50%] ">
+        <p className="text-[#30CFD0] uppercase font-[GilroyB] text-3xl mt-2 w-fit ">
           {winner.length > 1 ? (
-            winner
+            <>
+              {winner}
+              <canvas
+                id="custom_canvas"
+                className="w-full h-full hidden"
+              ></canvas>
+            </>
           ) : (
             <GiftIcon className={`${LoadingSpinner} w-20 h-20`} />
           )}
