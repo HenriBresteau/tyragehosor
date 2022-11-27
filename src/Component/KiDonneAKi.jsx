@@ -28,8 +28,7 @@ const KiDonneAKi = () => {
     { nom: "Vanille", url: "/Vanille.png" },
   ]);
 
-  const [donneur, setDonner] = useState("");
-
+  const [donneur, setDonner] = useState({});
   const [listDonneur, setListDonner] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,7 +36,7 @@ const KiDonneAKi = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setListPerson((prev) => [...prev, { person, person }]);
+    setListPerson((prev) => [...prev, { nom: person, url: `/${person}.png` }]);
     setPerson("");
   };
 
@@ -72,7 +71,6 @@ const KiDonneAKi = () => {
   };
 
   const handleDraw = () => {
-    console.log("draw");
     let donner = Math.floor(Math.random() * listPerson.length);
     setIsLoading(true);
     setTimeout(() => {
@@ -127,14 +125,23 @@ const KiDonneAKi = () => {
           <img src="/winner.png" alt="Tyragehore" className="w-40 h-40" />
         </span>
         <p className="text-[#30CFD0] uppercase font-[GilroyB] text-3xl mt-2 ">
-          {donneur.length > 1 ? (
-            donneur.nom
+          {Object.keys(donneur).length > 1 ? (
+            <>
+              {donneur.nom}
+              <span className="">
+                <img
+                  src={`persons/${donneur.url}`}
+                  alt=""
+                  className="absolute w-[240px] h-[240px] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]   animate-zoom"
+                />
+              </span>
+            </>
           ) : (
             <GiftIcon className={`${LoadingSpinner} w-20 h-20`} />
           )}
         </p>
       </div>
-      <ul className="flex gap-4 flex-wrap">
+      <ul className="mt-6 flex gap-4 flex-wrap">
         {listDonneur.map((item, index) => (
           <div className="flex items-center justify-center" key={index}>
             <BoxPersonList item={item.nom} url={item.url} />
