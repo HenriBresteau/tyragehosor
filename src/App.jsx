@@ -8,7 +8,7 @@ import "./App.css";
 import KiDonneAKi from "./Component/KiDonneAKi";
 import Navbar from "./Component/Navbar";
 import { Themes } from "./Component/Themes";
-import HomePage from "./Component/HomePage";
+import Home from "./Pages/Home";
 
 function App() {
     return (
@@ -16,7 +16,7 @@ function App() {
             <div className="App relative">
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/" element={<Home />} />
                     <Route
                         exact
                         path="/KiDonneAki"
@@ -24,9 +24,7 @@ function App() {
                     ></Route>
                     <Route exact path="/Themes" element={<Themes />}></Route>
                 </Routes>
-                <img src="/cactus-1.svg" alt="cactus" className="absolute bottom-0 right-0 h-20 w-20" />
-                <img src="/cactus-2.svg" alt="cactus" className="absolute bottom-0 left-0 h-20 w-20" />
-            </div> 
+            </div>
         </Router>
     );
 }
