@@ -1,0 +1,17 @@
+export const persons = [
+    { id: 0, name: "Antoine", url: "/Antoine.png" },
+    { id: 1, name: "Alexis", url: "/Alexis.png" },
+    { id: 2, name: "Bérangère", url: "/Berangere.png" },
+    { id: 3, name: "Brigitte", url: "/Brigitte.png" },
+    { id: 4, name: "Chloé", url: "/Chloe.png" },
+    { id: 5, name: "Elvina", url: "/Elvina.png" },
+    { id: 6, name: "Gérald", url: "/Gerald.png" },
+    { id: 7, name: "Henri", url: "/Henri.png" },
+    { id: 8, name: "Jean-Marie", url: "/Jean-Marie.png" },
+    { id: 9, name: "Manon", url: "/Manon.png" },
+    { id: 10, name: "Mathis", url: "/Mathis.png" },
+    { id: 11, name: "Maurane", url: "/Maurane.png" },
+    { id: 12, name: "Sylviane", url: "/Sylviane.png" },
+    { id: 13, name: "Vanessa", url: "/Vanessa.png" },
+    { id: 14, name: "Vanille", url: "/Vanille.png" },
+];
