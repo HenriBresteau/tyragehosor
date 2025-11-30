@@ -17,7 +17,7 @@ const HomePage = () => {
                         <Title>
                             Bienvenue sur le{" "}
                             <span className="text-green">Tyragehösor</span> pour
-                            le noël 2024
+                            le noël 2025
                         </Title>
                         <div className="absolute -bottom-0 translate-y-1/4 right-0 -translate-x-1/2 pointer-events-none">
                             <img

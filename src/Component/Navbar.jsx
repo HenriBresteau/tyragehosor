@@ -30,7 +30,7 @@ export default function Navbar() {
                         src="/t-rex-icon.png"
                         alt="logo"
                     />
-                    <h1 className="text-lg uppercase font-gilroy font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-[#92d079] to-[#42762e] ">
+                    <h1 className="text-lg uppercase font-gilroy font-extrabold text-transparent bg-clip-text bg-gradient-to-l from-greenlight to-green">
                         Tyragehösor
                     </h1>
                 </Link>

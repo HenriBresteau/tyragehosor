@@ -9,7 +9,7 @@ const Thematics = () => {
                     <img src="/idea.svg" alt="idea" />
                     <h2 className="font-gilroy font-bold text-5xl">Thèmes</h2>
                     <p className="font-fanwood text-center text-2xl text-primary w-full max-w-2xl">
-                        Découvrez les thèmes de l’année 2024 pour notre tirage
+                        Découvrez les thèmes de l’année 2025 pour notre tirage
                         au sort de Noël. Quels cadeaux et surprises se cachent
                         derrière ces idées uniques ?
                     </p>

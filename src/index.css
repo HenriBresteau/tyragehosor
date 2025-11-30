@@ -91,8 +91,10 @@
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
-        --green: 168 100% 21%;
-        --greenlight: 104 48% 64%;
+        /* --green: 168 100% 21%;
+        --greenlight: 104 48% 64%; */
+        --green: 0 84% 40%;
+        --greenlight: 0 72% 65%;
     }
 }
 @layer base {

@@ -39,7 +39,7 @@ const KiDonneAKi = () => {
 
         const options = {
             margin: 10,
-            filename: `TYRAGOSOR_2024_${hours}-${minutes}-${seconds}.pdf`,
+            filename: `TYRAGOSOR_2025_${hours}-${minutes}-${seconds}.pdf`,
             image: { type: "jpeg", quality: 0.98 },
             html2canvas: { scale: 2 },
             jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
@@ -93,7 +93,7 @@ const KiDonneAKi = () => {
             </div>
             <div ref={listRef} className="py-8">
                 <h2 className="text-2xl font-gilroy font-bold mb-4">
-                    Liste 2024 :
+                    Liste 2025 :
                 </h2>
                 <ul
                     // ref={listRef}

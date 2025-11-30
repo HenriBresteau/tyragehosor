@@ -20,9 +20,11 @@ export function ConcurentMarquee() {
     return (
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee pauseOnHover className="[--duration:60s]">
-                {persons.map((review) => (
-                    <ReviewCard key={review.id} {...review} />
-                ))}
+                {persons
+                    .sort((a, b)=> a.name.localeCompare(b.name))
+                    .map((review) => (
+                        <ReviewCard key={review.id} {...review} />
+                    ))}
             </Marquee>
             <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-greenlight "></div>
             <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-greenlight"></div>

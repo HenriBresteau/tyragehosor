@@ -1,10 +1,10 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
-import Title from "./Title";
-import JSConfetti from "js-confetti";
 import { themes } from "@/data/themes";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import ThemeListItem from "./ThemeListItem";
+import JSConfetti from "js-confetti";
+import React, { forwardRef, useRef, useState } from "react";
 import Button from "./Button";
+import ThemeListItem from "./ThemeListItem";
+import Title from "./Title";
 
 const LottiePlayer = forwardRef((props, ref) => {
     const [dotLottie, setDotLottie] = React.useState(null);
@@ -53,14 +53,14 @@ export const Themes = () => {
 
             jsConfetti.addConfetti({
                 emojis: [selectedWinner.emoji],
-                confettiNumber: 150,
+                confettiNumber: 75,
             });
         }, 3600);
         jsConfetti.clearCanvas();
     };
     return (
         <div className="my-10 mx-auto max-w-md lg:max-w-5xl overflow-hidden">
-            <Title>Thèmes 2024</Title>
+            <Title>Thèmes 2025</Title>
             <div className="my-4">
                 <h2 className="py-2 text-xl">Liste des thèmes :</h2>
                 <ul className="flex gap-4 flex-wrap">
@@ -102,6 +102,19 @@ export const Themes = () => {
                     </>
                 ) : (
                     <LottiePlayer ref={lottieRef} />
+                )}
+
+               {winner.name && (
+                    <div className="col-span-2 relative mt-4">
+                        <blockquote className="relative bg-gradient-to-r from-green-500 to-green-600 text-white rounded-3xl px-8 py-5 shadow-2xl border-4 border-green-700">
+                            <div className="absolute -top-6 left-20">
+                                <div className="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[20px] border-b-green-700"></div>
+                            </div>
+                            <p className="font-gilroy font-bold text-2xl text-black text-center drop-shadow-lg">
+                                {winner.message || "Bonne chance pour trouver une idée 😬"}
+                            </p>
+                        </blockquote>
+                    </div>
                 )}
             </div>
         </div>
